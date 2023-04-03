@@ -12,6 +12,7 @@ div p{
     size: 80px;
     color: cornflowerblue;
     text-align: center;
+    text-shadow: plum 3.2px 3.2px,green 6px 6px;
     font-size: 50px;
 }
 .bgimg{
@@ -23,4 +24,34 @@ div p{
 .box{
     border: 10px double powderblue;
     border-radius: 10px;
+}
+tr{
+    border:0.2rem black solid;
+    background-color: aquamarine;
+}
+table{
+    border-collapse: collapse;
+}
+a{
+    color: cadetblue;
+}
+tr:nth-child(even){
+    background-color: brown;
+}
+td,th{
+    padding: 5px;
+}
+tr:hover{
+    background-color: coral;
+}
+button{
+    background-color: cyan;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
+button:hover{
+    background-color: gray;
+    box-shadow: 0.2rem 0.2rem 4px;
 }
