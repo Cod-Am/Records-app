@@ -1,0 +1,9 @@
+.img{
+    border-radius: 100rem;
+    border: 4px double purple ;
+    height: 450px;
+    padding: 5px;
+}
+.tablecontent{
+    width: 50%;
+}

@@ -25,4 +25,16 @@ table{
 .navigation:hover{
     background-color:pink;
 }
+.textstyle{
+    color: #8F43EE;
+    font-size: 1.5rem;
+    padding: 100px;
+    text-align: center;
+}
+.contentTableStyling{
+    border: 2px solid black;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
