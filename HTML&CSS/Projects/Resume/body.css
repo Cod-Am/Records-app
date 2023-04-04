@@ -1,0 +1,28 @@
+body{
+    background-color:darkorange;
+}
+table{
+    border-collapse:separate;
+    
+}
+.navigation{
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 20px;
+    text-align: center;
+    width: 3%;
+    background-color:#FFDEB9 ;
+    border-radius: 100rem;
+}
+.navigationBarStyling{
+    font-style: italic;
+    font-style: oblique;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+.fontbrown{
+    color: brown;
+}
+.navigation:hover{
+    background-color:pink;
+}
+
