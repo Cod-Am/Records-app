@@ -1,0 +1,38 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*Top Nav Bar*/
+#top-nav-bar{
+    position: fixed;
+    width: 99vw;
+    color: white;
+    background-color: #212121;
+    height: 10vh;
+    justify-content: space-between;
+}
+.menu-icon{
+    width: 5vw;
+    padding: 1rem;
+}
+.yt-name{
+    color: white;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 1.7rem;
+    margin: 0.4rem;;
+}
