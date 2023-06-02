@@ -1,0 +1,26 @@
+const cardArray = [
+    {
+        name:'fries',
+        img:'images/Fries.jpg',
+    },
+    {
+        name:'burger',
+        img:'images/Burger.jpg',
+    },
+    {
+        name:'hotdog',
+        img:'images/Hotdog.jpg',
+    },
+    {
+        name:'shake',
+        img:'images/milkshake.jpg',
+    },
+    {
+        name:'ice-cream',
+        img:'images/ice-cream.png',
+    }
+    {
+        name:'pizza',
+        img:'images/pizza.jpg',
+    }
+];
