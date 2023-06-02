@@ -4,6 +4,7 @@ const resultDisplay=document.getElementById("result");
 const possibleChoices=document.querySelectorAll("button")
 let userChoice;
 let computerChoice;
+let result;
 
 possibleChoices.forEach(possibleChoice=> possibleChoice.addEventListener("click",(e)=>{
     userChoice=e.target.id;
@@ -14,13 +15,29 @@ function generateComputerChoices(){
     const randomNumber =Math.floor(Math.random()*3+1); 
     console.log("Random number: " + randomNumber);
     if(randomNumber===1){
-        computerChoice="Rock"
+        computerChoice="rock"
     }
     if(randomNumber===2){
-        computerChoice="Paper"
+        computerChoice="paper"
     }
     if(randomNumber===3){
-        computerChoice="Scissors"
+        computerChoice="scissors"
     }
     computerChoiceDisplay.innerHTML=computerChoice;
+    getResult();
+}
+function getResult() {
+    if (computerChoice === userChoice) {
+        result = "It's a draw... ~_~";
+    } else if (
+        (computerChoice === "Paper" && userChoice === "Rock") ||
+        (computerChoice === "Scissors" && userChoice === "Paper") ||
+        (computerChoice === "Rock" && userChoice === "Scissors")
+    ) {
+        result = "You Win! ^_^";;
+    } else {
+        result = "You Lose... (┬┬﹏┬┬)"
+    }
+
+    resultDisplay.innerHTML = result;
 }
