@@ -1,7 +1,7 @@
 .grid{
     position: absolute;
     height: 300px;
-    width: 600px;
+    width: 560px;
     border: black solid 1px;
 }
 .block{
@@ -9,4 +9,17 @@
     width: 100px;
     height: 20px;
     background-color: blue;
+}
+.user{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: red;
+}
+.ball{
+    position:absolute;
+    width: 20px; 
+    height: 20px;
+    border-radius: 10px;
+    background-color: black;
 }
