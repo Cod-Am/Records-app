@@ -116,6 +116,15 @@ function checkForCollisions() {
     if(ballCurrentPosition[0]>=(boardWidth-ballDiameter)||ballCurrentPosition[1]>=(boardHeight-ballDiameter)){
         changeDirection()
     }
+    for(let i=0;i<blocks.length;i++){
+        const block=blocks[i]
+        // checking collision with current block
+        if(ballCurrentPosition[0]+20>block.bottomLeft[0] && ballCurrentPosition[0]<block.bottomRight[0] && 
+            ballCurrentPosition[1]+20>block.bottomLeft[1]&&ballCurrentPosition[1]<block.topLeft[1]){
+                changeDirection()
+        }
+        
+    }
     // if(ballCurrentPosition[1]>=(boardWidth-ballDiameter)){
     //     changeDirection()
     // }
@@ -129,5 +138,5 @@ function changeDirection(){
         xDirection = -2
         return
     }
-    
+
 }
