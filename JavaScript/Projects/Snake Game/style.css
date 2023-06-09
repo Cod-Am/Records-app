@@ -1,0 +1,18 @@
+.grid{
+    width: 200px;
+    height:200px;
+    display: flex;
+    flex-wrap:wrap;
+    border: burlywood solid 5px;
+}
+.grid div{
+    width: 20px;
+    height: 20px;
+}
+.snake{
+    background-color: blue;
+
+}
+.apple{
+    background-color: red;
+}
