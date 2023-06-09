@@ -1,10 +1,12 @@
 const grid = document.querySelector('.grid');
 const blockWidth = 100;
 const blockHeight = 20;
-
+const boardWidth=560;
+const ballDiameter =20;
 const userStart = [230, 10];
 let currentPosition = userStart;
-
+let xDirection=2
+let yDirection=2;
 const ballStart = [270, 40];
 let ballCurrentPosition = ballStart;
 let timerId
@@ -96,17 +98,28 @@ function drawBall() {
 function moveBall() {
 
     // Update the ball's position
-    ballCurrentPosition[0] += 1
-    ballCurrentPosition[1] += 1; // Example: move the ball downward by 1 pixel
+    ballCurrentPosition[0] += xDirection
+    ballCurrentPosition[1] += yDirection // Example: move the ball downward by 1 pixel
 
     // Call drawBall to update the visual position
     drawBall();
+    checkForCollisions()
 }
 
 // Call moveball
 timerId=setInterval(moveBall,25)
 
 //check for collisions
-function checkCollisions() {
-    
+function checkForCollisions() {
+    //check for wall collision
+    if(ballCurrentPosition[0]>=(boardWidth-ballDiameter)){
+        changeDirection()
+    }
+}
+function changeDirection(){
+    if(xDirection===2&&yDirection===2){
+        yDirection = -2
+        return
+    }
+    // if(){}
 }
