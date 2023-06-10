@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const dino = document.querySelector('.dino');
     const grid = document.querySelector('.grid');
+    const alert=document.querySelector('#alert');
     let position = 0;
     let isJumping = false;
     let gravity = 0.9;
@@ -55,15 +56,19 @@ document.addEventListener("DOMContentLoaded", () => {
         let randomTime=Math.random()*4000;
         let obstaclePosition=900 
         const obstacle=document.createElement('div');
-        obstacle.classList.add('obstacle');
+        if(!isGameOver){obstacle.classList.add('obstacle');}
         grid.appendChild(obstacle);
         obstacle.style.left=obstaclePosition + 'px';
         
         let timerId = setInterval(function () {
             if(obstaclePosition>0&&obstaclePosition<60&&position<60){
                 clearInterval(timerId);
-                alert("Game Over")
+                alert.innerHTML='Game Over';
                 isGameOver=true
+                //remove all the obstacles
+                while(grid.firstChild){
+                    grid.removeChild(grid.lastChild)
+                }
             }
             obstaclePosition-=10
             obstacle.style.left=obstaclePosition + 'px'
@@ -73,15 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if(!isGameOver){setTimeout(generateObstacles,randomTime)}
   }
   generateObstacles()
-
-
-
-
-
-
-
-
-
 
 
   });
