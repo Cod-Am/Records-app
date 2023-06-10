@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let randomTime=Math.random()*4000;
         let obstaclePosition=900 
         const obstacle=document.createElement('div');
+        
         if(!isGameOver){obstacle.classList.add('obstacle');}
         grid.appendChild(obstacle);
         obstacle.style.left=obstaclePosition + 'px';
