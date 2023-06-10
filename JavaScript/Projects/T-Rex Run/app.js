@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     const dino = document.querySelector('.dino');
+    const grid = document.querySelector('.grid');
     let position = 0;
     let isJumping = false;
     let gravity = 0.9;
     let count = 0;
-  
+  let isGameOver = false;
     function control(e) {
       if (e.keyCode === 32) {
         console.log('key pressed');
@@ -49,5 +50,38 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }, 20);
     }
+      // creating obstacles
+    function generateObstacles(){
+        let randomTime=Math.random()*4000;
+        let obstaclePosition=900 
+        const obstacle=document.createElement('div');
+        obstacle.classList.add('obstacle');
+        grid.appendChild(obstacle);
+        obstacle.style.left=obstaclePosition + 'px';
+        
+        let timerId = setInterval(function () {
+            if(obstaclePosition>0&&obstaclePosition<60&&position<60){
+                clearInterval(timerId);
+                alert("Game Over")
+                isGameOver=true
+            }
+            obstaclePosition-=10
+            obstacle.style.left=obstaclePosition + 'px'
+
+            
+        },20)
+        if(!isGameOver){setTimeout(generateObstacles,randomTime)}
+  }
+  generateObstacles()
+
+
+
+
+
+
+
+
+
+
+
   });
-  
