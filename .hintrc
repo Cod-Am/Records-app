@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "highest-available-document-mode": "on",
+    "no-inline-styles": "on",
+    "detect-css-reflows/composite": "on",
+    "detect-css-reflows/layout": "on"
+  }
+}

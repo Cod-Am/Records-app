@@ -1,0 +1,34 @@
+.Movie{
+    margin: 10px;
+    background-color:burlywood;
+    padding: 10px;
+    font-weight: bold;
+    border: 1px black solid;
+    text-align: start;
+    width: 250px;display: block;
+
+}
+.imgdiv{
+    border: 1px black solid;
+    background-color: chocolate;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.img{
+    margin-left: auto;
+    margin-right: auto;
+    height: 240px;
+    padding: 5px;
+}
+.slide-top {
+	-webkit-animation: slide-top 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slide-top 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.fade-in {
+	-webkit-animation: fade-in 1.2s ease-in-out both;
+	        animation: fade-in 1.2s ease-in-out both;
+}
+.Movie:hover {
+    background-color: #C88EA7;
+  }
