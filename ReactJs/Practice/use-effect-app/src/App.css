@@ -1,0 +1,32 @@
+.App {
+  text-align: center;  
+}
+.table{
+  margin-top: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 50%;
+  margin-left: auto;
+  margin-right:auto ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tablecol{
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+button{
+  margin-top: 1rem;
+  padding: 0.8rem;
+  font-weight: bolder;
+  box-shadow: -1px 1px 1px;
+}
+button:hover{
+  cursor: pointer;
+  color: #5C469C;
+  background-color: #D4ADFC;
+  box-shadow: -3px 3px 3px;
+}

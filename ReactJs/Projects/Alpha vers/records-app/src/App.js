@@ -16,17 +16,22 @@ function App() {
     setEmail('');
   }
   const removeItem = (index) => {
-    let arr=data;
-      arr.splice(index, 1);
-      setData([...arr])
+    let arr = data;
+    arr.splice(index, 1);
+    setData([...arr])
+  }
+  const handlePress = (e) => {
+    if (e.key === 'Enter') {
+      addData();
     }
+  }
   return (
     <div className="App">
       <Header />
       <div className='form'>
         <Stack direction="row" spacing={5}>
-          <TextField value={name} id="name" label="Name" variant="outlined" onChange={(event) => setName(event.target.value)} />
-          <TextField value={email} id="email" label="Email" variant="outlined" onChange={(event) => setEmail(event.target.value)} />
+          <TextField onKeyDown={(e)=>handlePress(e)} value={name} id="name" label="Name" variant="outlined" onChange={(event) => setName(event.target.value)} />
+          <TextField onKeyDown={(e)=>handlePress(e)} value={email} id="email" label="Email" variant="outlined" onChange={(event) => setEmail(event.target.value)} />
           <Button onClick={addData} variant="contained" color="success"><AddIcon /></Button>
         </ Stack>
       </div>
@@ -47,7 +52,7 @@ function App() {
               <h4>{element.name}</h4>
               <h4>{element.email}</h4>
               <h4>
-                <Button onClick={()=>removeItem(index)} variant="outlined" color="error">
+                <Button onClick={() => removeItem(index)} variant="outlined" color="error">
                   <DeleteOutlineIcon />
                 </Button>
               </h4>
